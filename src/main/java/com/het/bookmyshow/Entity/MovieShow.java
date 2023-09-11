@@ -3,6 +3,7 @@ package com.het.bookmyshow.Entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 @Getter
@@ -11,12 +12,13 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @ToString
-public class movieShow {
+public class MovieShow {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer showId;
-    private Date datetime;
-    private Date startTime;
-    private Date endTime;
+    private Date showDate;
+    private LocalTime startTime;
+    private LocalTime endTime;
 
     @OneToOne
     @JoinColumn(name = "show_screen_id")

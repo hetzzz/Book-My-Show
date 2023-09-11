@@ -13,12 +13,13 @@ import java.util.List;
 @ToString
 public class Theatre {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer theatreID;
     private String theatreName;
     @OneToMany(mappedBy = "theatreId")
     private List<Screen> screensId;
-    @ManyToOne
-    @JoinColumn(name = "theatre_location_id")
+    @ManyToOne(cascade=CascadeType.MERGE)
+    @JoinColumn(name = "theatre_location_id",nullable = false)
     private TheatreLocation theatreLocationId;
 
 }

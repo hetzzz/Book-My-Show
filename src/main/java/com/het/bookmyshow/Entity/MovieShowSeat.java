@@ -24,6 +24,6 @@ public class MovieShowSeat {
 
     @ManyToOne
     @JoinColumn(name = "movie_show_id")
-    private movieShow movieShowId;
+    private MovieShow movieShowId;
 
 }

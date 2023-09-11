@@ -12,10 +12,12 @@ import java.util.List;
 @Entity
 @ToString
 public class Screen {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer screenId;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "theatre_id")
     private Theatre theatreId;
 

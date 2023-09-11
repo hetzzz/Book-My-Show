@@ -1,9 +1,7 @@
 package com.het.bookmyshow.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -14,10 +12,12 @@ import lombok.*;
 @ToString
 public class Comments {
     @Id
-    private String CommentId;
+    @GeneratedValue
+    private Integer CommentId;
     private String comment;
     @ManyToOne(optional = false)
     @JoinColumn(name = "movie_id")
+    @JsonBackReference
     private Movie movies;
 
 }

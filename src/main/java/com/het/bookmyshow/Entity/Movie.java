@@ -1,8 +1,6 @@
 package com.het.bookmyshow.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
@@ -16,6 +14,7 @@ import java.util.List;
 @ToString
 public class Movie {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer movieId;
     private String title;
     private String genre;
@@ -24,6 +23,7 @@ public class Movie {
     private Date releaseDate;
     private Integer rating;
     @OneToMany(mappedBy = "movies")
+//    @JsonBackReference
     private List<Comments> comments;
 
 }

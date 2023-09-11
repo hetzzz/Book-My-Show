@@ -1,0 +1,32 @@
+{
+    "title":"Avengers: Age of Ultron",
+    "genre": "Action",
+    "description": "Abc dfos",
+    "language": "English",
+    "releaseDate": "2018-07-14",
+    "rating": 7
+}
+
+{
+    "comment":"Amazing",
+    "movies" : {
+        "movieId": 1
+    }
+}
+
+
+{
+    "showDate" : "2018-07-14",
+    "startTime" : "",
+    "endTime" : "".
+    "showScreenId":"".
+    "movieID" : 1
+}
+
+
+{
+    "city" : "Thane",
+    "state" : "Maharashtra",
+    "area" : "Khopat",
+    "pincode" : 400601
+}
